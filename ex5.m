@@ -16,4 +16,5 @@ function ex5(graphZ, windowID, file_name)
     title(file_name+" ACC_Z Spectrum");
     imagesc(20*log10(spectrum));
     colorbar;
+    set(gca,'YDir','normal');
 end
