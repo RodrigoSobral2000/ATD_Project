@@ -8,7 +8,7 @@ function ex5(graphZ, windowID, file_name)
     frequencies= linspace(-fs/2, fs/2, numFrame);
     
     for i=1: numFrame-numLap:nElemGraph-numFrame
-        frame=graphZ(i:i+numFrame-1).*hamming(numFrame);
+        frame=graphZ(i:i+numFrame-1);
         absoluteFrame= abs(fftshift(fft(frame)));
         spectrum= [spectrum absoluteFrame(frequencies>=0)];
     end
